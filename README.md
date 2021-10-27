@@ -9,6 +9,11 @@ It will install Node v14.15.3, what version I used for building this project.\
 Or you can manually install Node v14.15.3\
 `npm install` will install all packages needed in the project.
 
+## Code formatting
+
+There project is using Prettier for code formatting and you can update the formatting option on `.prettierrc` file.\
+And you can also modify vscode project settings from `.vscode` folder.
+
 ### `npm start`
 
 Runs the app in the development mode.\
