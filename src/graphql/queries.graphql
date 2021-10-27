@@ -1,0 +1,30 @@
+query collectionTypes {
+  collectionTypes {
+    id
+    name
+  }
+}
+
+query collections($type: String!) {
+  collections(type: $type) {
+    id
+    name
+    detail
+  }
+}
+
+query favoriteCollections($userId: String!) {
+  favoriteCollections(userId: $userId) {
+    id
+    name
+    detail
+  }
+}
+
+query collectionById($collectionId: String!) {
+  collectionById(collectionId: $collectionId) {
+    id
+    name
+    detail
+  }
+}

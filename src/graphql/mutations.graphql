@@ -1,0 +1,11 @@
+mutation addFavoriteCollection($userId: String, $collectionId: String) {
+  addFavoriteCollection(userId: $userId, collectionId: $collectionId) {
+    success
+  }
+}
+
+mutation removeFavoriteCollection($userId: String, $collectionId: String) {
+  removeFavoriteCollection(userId: $userId, collectionId: $collectionId) {
+    success
+  }
+}

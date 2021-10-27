@@ -1,0 +1,24 @@
+{
+  "translations": {
+    "page_title_collections": "Collections",
+    "page_title_favorites": "Favorites",
+    "page_title_collection": "Collection",
+    "collections_success": "Pulled collections data successfully",
+    "api_error": "There might be an issue with API server.",
+    "add_favorite_success": "Added to favorite list",
+    "remove_favorite_success": "Removed from favorite list",
+    "get_collection_success": "Loaded collection data successfully"
+  },
+  "words": {
+    "title": "MarketPlace",
+    "collections": "Collections",
+    "favorites": "Favorites",
+    "view_detail": "View Detail",
+    "remove_favorite": "Remove from favorite",
+    "loading": "Loading ..."
+  },
+  "contact": {
+    "author": "Eugene Lin",
+    "created_by": "Created by"
+  }
+}
