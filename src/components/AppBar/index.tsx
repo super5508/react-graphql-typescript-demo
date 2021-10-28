@@ -30,7 +30,7 @@ const IlluviumAppBar = () => {
     <AppBar position="sticky" color="primary" sx={{ paddingY: 1 }}>
       <Container>
         <Box sx={{ display: 'flex' }} justifyContent="space-between" alignItems="center">
-          <Typography variant="h4" component="div" sx={{ fontWeight: 900 }}>
+          <Typography variant="h4" component="h4" sx={{ fontWeight: 900 }}>
             {t('words:title')}
           </Typography>
           <Box>
@@ -38,7 +38,10 @@ const IlluviumAppBar = () => {
               <Badge>{t('words:collections')}</Badge>
             </RouterLink>
             <RouterLink className={classes.pageLink} to={pagePaths.favorites}>
-              <Badge badgeContent={favorites.length} color="error">
+              <Badge
+                badgeContent={<span data-testid="appbar-notifications">{favorites.length}</span>}
+                color="error"
+              >
                 {t('words:favorites')}
               </Badge>
             </RouterLink>

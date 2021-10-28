@@ -160,9 +160,14 @@ const CollectionsPage = () => {
             onChange={(e) => setSelectedId(e.target.value)}
             size="small"
             disabled={typeLoading}
+            data-testid="collections-toggle"
           >
             {collectionTypes.map((collectionType) => (
-              <MenuItem key={collectionType.id} value={collectionType.id}>
+              <MenuItem
+                key={collectionType.id}
+                value={collectionType.id}
+                data-testid="collection-type"
+              >
                 {collectionType.name}
               </MenuItem>
             ))}
@@ -190,7 +195,11 @@ const CollectionsPage = () => {
               </TableRow>
             ) : (
               rows.map((row) => (
-                <TableRow key={row.name} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                <TableRow
+                  key={row.name}
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                  data-testid="collection-row"
+                >
                   <TableCell component="th" scope="row">
                     {row.name}
                   </TableCell>

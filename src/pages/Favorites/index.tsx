@@ -11,6 +11,7 @@ import {
   Box,
   Button,
 } from '@mui/material';
+import { KeyboardArrowUp as IconUp, KeyboardArrowDown as IconDown } from '@mui/icons-material';
 import { makeStyles, createStyles } from '@mui/styles';
 import { useState, useCallback, Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -104,8 +105,16 @@ const CollectionsPage = () => {
             {favorites.map((row) => (
               <Fragment key={row.id}>
                 <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                  <TableCell component="th" scope="row" onClick={() => toggleRows(row.id)}>
-                    {row.name}
+                  <TableCell
+                    component="th"
+                    scope="row"
+                    onClick={() => toggleRows(row.id)}
+                    data-testid="favorite-collection"
+                  >
+                    <Box display="flex" alignItems="center" justifyContent="space-between">
+                      <span>{row.name}</span>
+                      {openIds.includes(row.id) ? <IconUp /> : <IconDown />}
+                    </Box>
                   </TableCell>
                 </TableRow>
                 <TableRow sx={{ border: 0 }}>
@@ -120,6 +129,7 @@ const CollectionsPage = () => {
                         sx={{ paddingY: 1, paddingLeft: 4, paddingRight: 2 }}
                         className={classes.collectionDetail}
                         alignItems="center"
+                        data-testid="favorite-collection-detail"
                       >
                         <Box component="span" marginRight="auto">
                           {row.detail}

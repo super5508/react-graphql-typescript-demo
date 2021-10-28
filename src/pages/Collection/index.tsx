@@ -52,7 +52,9 @@ const CollectionPage = () => {
 
   return (
     <>
-      <Alert severity="info">{collection?.detail}</Alert>
+      <Alert severity="info" role="contentinfo">
+        {collection?.detail}
+      </Alert>
       {toastComponent}
     </>
   );
